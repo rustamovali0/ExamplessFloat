@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Floating Divs</title>
+	<style>
+		/* floatlari sonra yaz */
+
+		#container {
+			background: rgb(155, 155, 155);
+		}
+
+		.box {
+			width: 150px;
+			height: 150px;
+			margin: 5px;
+			border-radius: 15px;
+		}
+
+		.first {
+			background: red;
+			float: left;
+		}
+
+		.second {
+			background: blue;
+			float: left;
+		}
+
+		.third {
+			background: green;
+			float: left;
+		}
+
+	    /* .clearfix {
+			overflow: auto;
+		}  */
+
+		.clearfix::after {
+			content: "";
+			display: block;
+			clear: both;
+		} 
+
+		span{
+			background-color: red;
+			color: #fff;
+			border-radius: 5px;
+		}
+
+		span::before {
+			content: " ----";
+			display: block;
+			background-color: lightseagreen;
+			width: 100px;
+			height: 20px;
+			line-height: 15px;
+			border-radius: 10px;
+			text-align: center;
+			color: aliceblue;
+			margin: 10px 0px;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<div id="container" class="clearfix">
+
+		<div class="first box"></div>
+		<div class="second box"></div>
+		<div class="third box"></div>
+		<!-- <div style="clear: both;"></div> -->
+	</div>
+
+	<span>
+		Hello World ...
+	</span>
+
+</body>
+
+</html>
